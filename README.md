@@ -1,7 +1,4 @@
-INSERT GRAPHIC HERE (include hyperlink in image)
-
-# Tiamat
-Personal discord bot
+# Tiamat Personal discord bot
 
 Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
