@@ -14,6 +14,12 @@ class AdminCommands(commands.Cog):
     async def unban(self, ctx, arg1):
         await ctx.channel.send('Unbanned {}'.format(arg1))
 
+    #@commands.command(name='clear', aliases=['purge'])
+    #@commands.has_any_role('Twilight')
+    #async def clear(self, ctx, amount=10):
+        #await ctx.channel.purge(limit=amount)
+
+
 
 
 def setup(client):

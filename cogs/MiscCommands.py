@@ -10,7 +10,7 @@ class MiscCommands(commands.Cog):
     async def add_role_command(self, ctx, arg1):
         print(arg1)
 
-    @commands.command(name='removerole', aliases=['removerole'])
+    @commands.command(name='removerole', aliases=['rrole'])
     async def remove_role_command(self, ctx, arg1):
         await ctx.channel.send('Removing role')
 

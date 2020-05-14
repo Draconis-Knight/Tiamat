@@ -1,12 +1,12 @@
 import discord
 from discord.ext import commands, tasks
-#from discord.utils import get
+from discord.utils import get
 from itertools import cycle
-#import asyncio
-#import time
-#import json
+import asyncio
+import time
+import json
 import os
-#import random
+import random
 
 client = commands.Bot(command_prefix='.')
 status = cycle(['?help',
@@ -77,7 +77,6 @@ async def on_member_update(before, after):
 async def on_member_join(member):
     global joined
     joined += 1
-    ##    e = discord.Embed(title='Welcome to the Server', colour=0xff0000)
     for channel in member.guild.channels:
         if str(channel) == 'Welcome':
             await client.channel.send(f'''Welcome to the server {member.mention}''')
@@ -99,17 +98,12 @@ async def on_message(message):
     if str(message.channel) in channels and message.content.find('hello') != -1:
                     await message.channel.trigger_typing()
                     await message.channel.send('svabol shilta wer jimosiig dask tir ihk wux vrak')
-    ##            if message.content == '.users':
-    ##                await message.channel.send(f"""# of Members: {id.member_count}""")
-    await client.process_commands(message)
+                    await client.process_commands(message)
 
 @client.command()
-@commands.has_permissions(manage_messages=True)
+#@commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=10):
     await ctx.channel.purge(limit=amount)
-
-
-
 
 ##last_string = 0
 @tasks.loop(seconds=10)

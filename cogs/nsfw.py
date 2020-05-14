@@ -1,6 +1,4 @@
-import discord
 import aiohttp
-import io
 from discord.ext import commands
 
 
